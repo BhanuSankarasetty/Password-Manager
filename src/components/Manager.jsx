@@ -127,44 +127,30 @@ const Manager = () => {
                 </p>
 
                 {/* Input Section */}
-                <div className="flex flex-col p-4 text-black gap-4 items-center w-full max-w-full">
-                    <input
-                        value={form.site}
-                        onChange={handleChange}
-                        placeholder='Enter website URL'
-                        className='rounded-full border bg-white border-green-500 w-full p-3 text-sm sm:text-base'
-                        type="text" name="site" id="site"
-                    />
+                <div className="flex flex-col p-4 text-black gap-8 items-center">
+                    <input value={form.site} onChange={handleChange} placeholder='Enter website URL'
+                        className='rounded-full border bg-white border-green-500 w-full p-4 py-1'
+                        type="text" name="site" id="site" />
 
-                    <div className="flex flex-col sm:flex-row w-full justify-between gap-4">
-                        <input
-                            value={form.username}
-                            onChange={handleChange}
-                            placeholder='Enter Username'
-                            className='rounded-full border bg-white border-green-500 w-full p-3 text-sm sm:text-base'
-                            type="text" name="username" id="username"
-                        />
+                    <div className="flex flex-col md:flex-row w-full md:w-[95vw] justify-between gap-8">
+                        <input value={form.username} onChange={handleChange} placeholder='Enter Username'
+                            className='rounded-full border  bg-white border-green-500 w-full p-4 py-1'
+                            type="text" name="username" id="username" />
 
-                        <div className="relative w-full sm:w-auto flex-1">
-                            <input
-                                ref={passwordRef}
-                                value={form.password}
-                                onChange={handleChange}
+                        <div className="relative">
+                            <input ref={passwordRef} value={form.password} onChange={handleChange}
                                 placeholder='Enter Password'
-                                className='rounded-full border bg-white border-green-500 w-full p-3 text-sm sm:text-base pr-10'
-                                type="password" name="password" id="password"
-                            />
-                            <span
-                                className='absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer'
+                                className='rounded-full border  bg-white border-green-500 w-full md:w-[30vw] p-4 py-1'
+                                type="password" name="password" id="password" />
+                            <span className='absolute right-[3px] top-[4px] cursor-pointer'
                                 onClick={showPassword}>
-                                <img ref={ref} className='p-1' width={24} src="icons/eye.png" alt="eye" />
+                                <img ref={ref} className='p-1' width={26} src="icons/eye.png" alt="eye" />
                             </span>
                         </div>
                     </div>
 
-                    <button
-                        onClick={savePassword}
-                        className='flex justify-center items-center gap-2 bg-green-400 hover:bg-green-300 rounded-full px-6 py-2 w-full sm:w-fit border border-green-900 text-sm sm:text-base'>
+                    <button onClick={savePassword}
+                        className='flex justify-center items-center gap-2 bg-green-400 hover:bg-green-300 rounded-full px-8 py-2 w-fit border border-green-900'>
                         <lord-icon
                             src="https://cdn.lordicon.com/jgnvfzqg.json"
                             trigger="hover">
@@ -172,6 +158,7 @@ const Manager = () => {
                         Save
                     </button>
                 </div>
+
 
                 {/* Password Table */}
                 <div className="passwords w-full mt-4">
